@@ -1,0 +1,13 @@
+---
+execution:
+  - scenario:
+      think-time: 0.75
+      requests:
+        - http://blazedemo.com/
+        - http://blazedemo.com/reserve.php
+    concurrency: 10
+    ramp-up: 40s
+    hold-for: 2m
+    locations:
+      us-east-1: 1
+

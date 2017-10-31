@@ -1,0 +1,10 @@
+---
+execution:
+- concurrency: 10
+  hold-for: 5m
+  ramp-up: 60s
+  scenario: two jmxs
+scenarios:
+  two jmxs:
+    script: /Users/guysalton/Downloads/labs/DemoTest1.jmx
+    script: /Users/guysalton/Downloads/labs/DemoTest2.jmx
