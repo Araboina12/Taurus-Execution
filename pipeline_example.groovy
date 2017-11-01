@@ -5,7 +5,7 @@ node {
    stage('Performance Tests') {
     parallel(
         BlazeMeterTest: {
-            dir ('Taurus Resources') {
+            dir ('/Desktop/Taurus Resources') {
                 'bzt taurus_jmeter_script1.yml -report'
             }
         },
