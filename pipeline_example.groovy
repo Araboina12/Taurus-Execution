@@ -6,7 +6,7 @@ node {
     parallel(
         BlazeMeterTest: {
             dir ('/Desktop/Taurus Resources') {
-                  bat 'taurus.bat'
+               @ 'taurus.bat'
             }
         },
         Analysis: {
