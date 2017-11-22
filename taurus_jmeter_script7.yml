@@ -1,0 +1,24 @@
+---
+execution:
+- concurrency: 5
+  hold-for: 1m
+  ramp-up: 20s
+  scenario: Thread Group
+scenarios:
+  Thread Group:
+    requests:
+    - label: blazedemo
+      method: GET
+      url: http://blazedemo.com/
+    - body:
+        fromPort: Paris
+        toPort: Buenos Aires
+      label: reserve
+      method: POST
+      url: http://blazedemo.com/reserve.php
+reporting:
+- module: junit-xml
+  filename: junit_report.xml
+  data-source:pass-fail
+  
+ 
