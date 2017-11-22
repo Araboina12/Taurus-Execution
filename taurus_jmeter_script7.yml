@@ -20,5 +20,8 @@ reporting:
 - module: junit-xml
   filename: junit_report.xml
   data-source: pass-fail
-  
+  services:
+- module: passfail
+  criteria:
+  - avg-rt>10ms for 7s, stop as failed
  
